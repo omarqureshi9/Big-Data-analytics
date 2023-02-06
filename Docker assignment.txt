@@ -1,0 +1,23 @@
+
+
+First of all, I made a folder named site-content in C drive. Then I created an index.html file.
+
+
+
+To run basic server, I used the following code
+docker run -it --rm -d -p 9090:80 --name web nginx
+
+
+To stop this server, I typed: 
+
+docker stop web
+
+
+To link my webpage to the server, I used: 
+
+docker run -it --rm -d -p 9090:80 --name site-content -v C:/site-content:/usr/share/nginx/html nginx
+
+This linked my webpage to the server
+
+
+The total ram used is 1.24 GB our of 4 GB
